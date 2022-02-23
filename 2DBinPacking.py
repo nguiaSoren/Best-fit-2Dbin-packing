@@ -114,8 +114,7 @@ def addInBox(quantityProducts):
     # start adding product in boxes; start with product with biggestArea (descending order)
     # array of indexes of products with biggestAreas in descending order
     areasProduct = [product.L * product.H  for product in product_Types_list]
-    IndexSortedByBiggestAreas = [b[0] for b in sorted(enumerate(areasProduct ),key=lambda i:i[1])]
-    IndexSortedByBiggestAreas.reverse()
+    IndexSortedByBiggestAreas = [b[0] for b in sorted(enumerate(areasProduct),key=lambda i:i[1],reverse=True)]
     for k in IndexSortedByBiggestAreas:  
         productQuantity = quantityProducts[k]
         # if it's empty, go to next products
