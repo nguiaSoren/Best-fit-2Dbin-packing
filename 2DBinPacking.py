@@ -90,7 +90,7 @@ def perfectBoxFor(index):
     biggestHIndexes = [i for i in biggestLIndexes if box_Types_list[i].H > tresHoldH]
     # case no boxes can't sustain maximum maximum height, try with minimum_height (default height of currentProduct)
     if biggestHIndexes == []:
-        biggestHIndexes = [i for i in biggestLIndexes if box_Types_list[i].H > currentProduct.H]
+        biggestHIndexes = [i for i in biggestLIndexes if box_Types_list[i].H >= currentProduct.H]
     # Find biggest Length(s) of box in our final found indexes to maximise space;
     # since it is in descending order , we know that biggest length is at index biggestHIndexes[0], but we could have boxes with the same length, that's why we're gonna double check 
     highestIndex = biggestHIndexes[0]
