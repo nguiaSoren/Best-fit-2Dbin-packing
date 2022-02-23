@@ -7,7 +7,8 @@ We are given several types of products, several types of box with their prices a
 This algorithm will select the best suitable boxes for the given product list. It will select the best boxes according to the dimensions of the products and the prices of the boxes.
 Then it will add each unit of each product in the appropriate box
 
-for example, we got 
+for example, we got:
+
 product_Types_list = [Product("P0",40,340,2), Product("P1",100,10,10)]
 
 quantityProducts = [100,10]
