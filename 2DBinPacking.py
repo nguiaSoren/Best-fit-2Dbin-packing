@@ -79,8 +79,7 @@ def perfectBoxFor(index):
     # this length is the tresholdL
     tresHoldL = currentProduct.L
     # order indexes by descending order according to length
-    biggestLIndexes = [b[0] for b in sorted(enumerate([boxType.L for boxType in box_Types_list]),key=lambda i:i[1])]
-    biggestLIndexes.reverse()
+    biggestLIndexes = [b[0] for b in sorted(enumerate([boxType.L for boxType in box_Types_list]),key=lambda i:i[1],reverse=True)]
     # find all indexes of boxes whose length is superior or equal to tresHoldL
     biggestLIndexes = [i for i in biggestLIndexes if box_Types_list[i].L > tresHoldL ]
     # total height of a FULL stack of product_Types_list[index] 
