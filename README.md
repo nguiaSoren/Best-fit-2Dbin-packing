@@ -4,7 +4,7 @@ Best-fit 2Dbin packing
 This is a Best-fit 2Dbinpackingalgorithm.
 We are given several types of products, several types of box with their prices and the total number of units of each product that must be put in the box.
 
-This algorithm will select the best suitable boxes for the given product list. It will select the best boxes according to the dimensions of the products and the prices of the boxes.
+This algorithm will select the best suitable boxes for the given product list. It will select the best boxes according to the dimensions of the products ( Height and length ), and the prices of the boxes.
 Then it will add each unit of each product in the appropriate box
 
 for example, we got:
