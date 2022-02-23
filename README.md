@@ -9,7 +9,9 @@ Then it will add each unit of each product in the appropriate box
 
 for example, we got 
 product_Types_list = [Product("P0",40,340,2), Product("P1",100,10,10)]
+
 quantityProducts = [100,10]
+
 box_Types_list = [Box("B0",100,700,100), Box("B1",100,700,100)]
 
 
