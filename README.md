@@ -7,7 +7,7 @@ Best-fit 2Dbin packing
 + Best-fit is an online algorithm for bin packing. Its input is a list of items of different sizes. 
 + Its output is a packing - a partition of the items into bins of fixed capacity, 
 + such that the sum of sizes of items in each bin is at most the capacity. 
-+ Ideally, we would like to use as few bins as possible, but minimizing the number of bins is an NP-hard problem. 
++ Even though minimizing the number of bins is an NP-hard problem, we will use as few bins as possible,
 + The best-fit algorithm uses the following heuristic:
 
 ! It keeps a list of open bins, which is initially empty.
