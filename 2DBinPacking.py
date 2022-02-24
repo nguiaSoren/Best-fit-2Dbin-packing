@@ -83,7 +83,7 @@ def perfectBoxFor(index):
     bigHBoxes = [box for box in bigLBoxes if box.L >= tresHoldL and box.H >= tresHoldH]
     # case no boxes can't sustain maximum maximum height (tresHoldH), try with minimum_height (default height of currentProduct)
     bigHBoxes = [box for box in bigLBoxes if box.L >= tresHoldL and box.H >= currentProduct.H] if bigHBoxes == [] else bigHBoxes
-    # Find box(es) with biggest Length(s) in our bigHBoxes to maximise space;
+    # Find box(es) with biggest Length(s) in our bigHBoxes to maximize space;
     # since it is in descending order , we know that biggest length is at bigHBoxes[0], but we could have boxes with the same length, that's why we're gonna double check 
     bestFitBoxes = [box for box in bigHBoxes if box.L == bigHBoxes[0].L]
     # case we got boxes with same length and different heights, take the one with the biggestArea
