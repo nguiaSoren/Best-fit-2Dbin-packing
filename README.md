@@ -8,6 +8,13 @@ When an item arrives, it find a bin with the maximum load into which the item ca
 If such a bin is found, the new item is placed inside it.
 Otherwise, a new bin is opened and the coming item is placed inside it.
 
+```diff
+- text in red
++ text in green
+! text in orange
+# text in gray
+@@ text in purple (and bold)@@
+```
 
 This is a Best-fit 2Dbinpackingalgorithm.
 
