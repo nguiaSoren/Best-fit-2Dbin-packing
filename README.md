@@ -16,15 +16,6 @@ Best-fit 2Dbin packing
 ! Otherwise, a new bin is opened and the coming item is placed inside it.
 ```
 
-This is a Best-fit 2Dbinpackingalgorithm.
-
-We are given several types of products, several types of box with their prices and the total number of units of each product that must be put in the box.
-
-This algorithm will select the best suitable boxes for the given product list. It will select the best boxes according to the dimensions of the products ( Height and length ), and the prices of the boxes.
-Then it will add each unit of each product in the appropriate box
-
-for example, we got:
-
 product_Types_list = [Product("P0",40,340,2), Product("P1",100,10,10)]
 
 quantityProducts = [100,10]
