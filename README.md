@@ -19,7 +19,9 @@ box_Types_list = [Box("B0",100,700,100), Box("B1",100,700,100)]
 
 the program will add every products in corresponding boxes
 
-<img width="746" alt="1" src="https://user-images.githubusercontent.com/63113307/155256065-7445ab4d-372a-4e77-a2c1-f80a0dde565f.png">
+![0](https://user-images.githubusercontent.com/63113307/155463805-c6bda98b-5b38-4fe2-b127-c5c586c90e07.jpg)
 
 
-<img width="870" alt="2" src="https://user-images.githubusercontent.com/63113307/155255717-60d73d34-d996-4da6-834b-d8025da7789d.png">
+![1](https://user-images.githubusercontent.com/63113307/155463817-5ce051fa-c510-413f-93cb-f54e23698334.jpg)
+
+
