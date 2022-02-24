@@ -7,7 +7,8 @@ class Product:
         self.id = id
         self.H = H
         self.L = L
-        self.nbStackedMax = nbStackedMax 
+        self.nbStackedMax = nbStackedMax
+        self.area = self.L * self.H
     def __repr__(self):
         return f" Product H: {self.H}, Product L: {self.L} with nbEmpileMax: {self.nbStackedMax }  \n"
     
@@ -50,6 +51,7 @@ class BoxContainer(Box):
     def __repr__(self):
         return f" Box id: {self.id}, Box H: {self.H}, Box.L: {self.L}, priceBox: {self.priceBox}, productQuantities: {self.productQuantities} , nbStackedMax: {self.nbStackedMax} \n"
 
+
 # first Product , id = "P0", height = 74, length = 114, nbStackedMax = 3      
 # second Product , id = "P1", height = 4000, length = 1000, nbStackedMax = 1  
 product_Types_list1 = [Product("P0",74,114,3), Product("P1",70,4000,5),Product("P2",4000,1000,1),Product("P3",157,143,1), Product("P4",145,330,4)] 
@@ -79,11 +81,11 @@ def perfectBoxFor(index):
     tresHoldH = currentProduct.H * currentProduct.nbStackedMax
     # order boxes in descending order according to length
     bigLBoxes = sorted([box for box in box_Types_list],key=lambda i:i.L,reverse=True)
-    # find all boxes that respect tresholdValues
+    # find all indexes of boxes that respect tresholdValues
     bigHBoxes = [box for box in bigLBoxes if box.L >= tresHoldL and box.H >= tresHoldH]
     # case no boxes can't sustain maximum maximum height (tresHoldH), try with minimum_height (default height of currentProduct)
     bigHBoxes = [box for box in bigLBoxes if box.L >= tresHoldL and box.H >= currentProduct.H] if bigHBoxes == [] else bigHBoxes
-    # Find box(es) with biggest Length(s) in our bigHBoxes to maximize space;
+    # Find box(es) with biggest Length(s) in our bigHBoxes to maximise space;
     # since it is in descending order , we know that biggest length is at bigHBoxes[0], but we could have boxes with the same length, that's why we're gonna double check 
     bestFitBoxes = [box for box in bigHBoxes if box.L == bigHBoxes[0].L]
     # case we got boxes with same length and different heights, take the one with the biggestArea
@@ -94,11 +96,10 @@ def perfectBoxFor(index):
     return bestBox[0] 
 
 def addInBox(quantityProducts):
-    # start adding product in boxes; start with product with biggestArea (descending order)
-    # array of indexes of products with biggestAreas in descending order
-    areasProduct = [product.L * product.H  for product in product_Types_list]
-    IndexSortedByBiggestAreas = [b[0] for b in sorted(enumerate(areasProduct ),key=lambda i:i[1],reverse=True)]
-    for k in IndexSortedByBiggestAreas:  
+    # start filling boxes by product with a biggestArea
+    areasProductList = sorted(product_Types_list ,key=lambda i:i.area,reverse=True)
+    for product in areasProductList: 
+        k  = product_Types_list.index(product)  
         productQuantity = quantityProducts[k]
         # if it's empty, go to next products
         if productQuantity!= 0:
@@ -148,3 +149,4 @@ for j, box in enumerate(ourBoxes):
 for j, box in enumerate(box_Types_list):
     strWord = "boxes bought" if boxBoughtNumberList[j] > 1 else "box bought"
     print("Box ID :", box.id , "---", boxBoughtNumberList[j] , strWord) 
+
