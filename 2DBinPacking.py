@@ -79,7 +79,7 @@ def perfectBoxFor(index):
     tresHoldH = currentProduct.H * currentProduct.nbStackedMax
     # order boxes in descending order according to length
     bigLBoxes = sorted([box for box in box_Types_list],key=lambda i:i.L,reverse=True)
-    # find all indexes of boxes that respect tresholdValues
+    # find all boxes that respect tresholdValues
     bigHBoxes = [box for box in bigLBoxes if box.L >= tresHoldL and box.H >= tresHoldH]
     # case no boxes can't sustain maximum maximum height (tresHoldH), try with minimum_height (default height of currentProduct)
     bigHBoxes = [box for box in bigLBoxes if box.L >= tresHoldL and box.H >= currentProduct.H] if bigHBoxes == [] else bigHBoxes
