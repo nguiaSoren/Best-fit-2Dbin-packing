@@ -142,6 +142,8 @@ def addInBox(quantityProducts):
 
        
 addInBox(quantityProducts)
+
+print("\n","FOR PRODUCTS NUMBER OF UNITS ======================================",quantityProducts)
 for j, box in enumerate(ourBoxes):
     print("B"+ str(j))
     print(box)
@@ -149,4 +151,3 @@ for j, box in enumerate(ourBoxes):
 for j, box in enumerate(box_Types_list):
     strWord = "boxes bought" if boxBoughtNumberList[j] > 1 else "box bought"
     print("Box ID :", box.id , "---", boxBoughtNumberList[j] , strWord) 
-
